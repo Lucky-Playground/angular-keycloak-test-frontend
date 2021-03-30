@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { CustomerLoginComponent } from './view/customer-login/customer-login.component';
+
+import { CustomerService } from './service/customer.service';
 
 @NgModule({
   declarations: [
@@ -10,9 +14,12 @@ import { CustomerLoginComponent } from './view/customer-login/customer-login.com
     CustomerLoginComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [CustomerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
