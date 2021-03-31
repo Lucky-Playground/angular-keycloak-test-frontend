@@ -1,23 +1,23 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {Customer} from '../model/customer';
+import {User} from '../model/user';
 import {catchError} from 'rxjs/operators';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class CustomerService {
+export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  postCustomer(customer: Customer): Observable<Customer>{
+  postUser(user: User): Observable<User>{
     const  httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
     };
-    return this.http.post<Customer>('http://localhost:8080/api/v1/customers', customer, httpOptions);
+    return this.http.post<User>('http://localhost:8080/api/v1/customers', user, httpOptions);
   }
 }

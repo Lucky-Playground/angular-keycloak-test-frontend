@@ -4,15 +4,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { CustomerLoginComponent } from './view/customer-login/customer-login.component';
+import { SignInComponent } from './view/sign-in/sign-in.component';
 
-import { CustomerService } from './service/customer.service';
+import { UserService } from './service/user.service';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerLoginComponent
+    SignInComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [CustomerService
+  providers: [UserService
   ],
   bootstrap: [AppComponent]
 })
