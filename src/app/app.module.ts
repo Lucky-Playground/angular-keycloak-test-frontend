@@ -8,11 +8,13 @@ import { SignInComponent } from './view/sign-in/sign-in.component';
 
 import { UserService } from './service/user.service';
 import { AppRoutingModule } from './app-routing.module';
+import { SignUpComponent } from './view/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignInComponent
+    SignInComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
