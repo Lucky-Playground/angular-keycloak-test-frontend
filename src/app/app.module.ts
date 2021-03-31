@@ -5,9 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { KeycloakAngularModule , KeycloakService } from 'keycloak-angular';
 
 import { AppComponent } from './app.component';
-import { CustomerLoginComponent } from './view/customer-login/customer-login.component';
+import { SignInComponent } from './view/sign-in/sign-in.component';
 
-import { CustomerService } from './service/customer.service';
+import { UserService } from './service/user.service';
 import { AppRoutingModule } from './app-routing.module';
 
 function initializeKeycloak(keycloak: KeycloakService) {
@@ -30,7 +30,7 @@ function initializeKeycloak(keycloak: KeycloakService) {
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerLoginComponent
+    SignInComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +46,7 @@ function initializeKeycloak(keycloak: KeycloakService) {
       multi: true,
       deps: [KeycloakService]
     },
-    CustomerService
+    UserService
   ],
   bootstrap: [AppComponent]
 })

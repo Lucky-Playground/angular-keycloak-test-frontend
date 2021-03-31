@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
-import { CustomerLoginComponent } from './view/customer-login/customer-login.component';
+import { SignInComponent } from './view/sign-in/sign-in.component';
 
 const routes: Routes = [
-  {path: 'login', component: CustomerLoginComponent }
+  {path: 'sign-in', component: SignInComponent }
 ];
 
 @NgModule({
