@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CustomerLoginComponent } from './view/customer-login/customer-login.component';
 
 import { CustomerService } from './service/customer.service';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CustomerService } from './service/customer.service';
   imports: [
     BrowserModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [CustomerService
   ],
