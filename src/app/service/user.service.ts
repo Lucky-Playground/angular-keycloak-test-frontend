@@ -18,5 +18,5 @@ export class UserService {
     };
     return this.http.post<User>('http://localhost:8080/api/v1/customers', user, httpOptions);
   }
-  // todo: need to call keycloak APIs to get access token and refresh token
+  // no need of user service when using keycloak
 }

@@ -31,7 +31,11 @@ export class ManageCustomerComponent implements OnInit {
   onSave(): void{
     this.customer = this.customerForm.value;
     console.log(this.customer);
-    // todo: call customer services
+
+    this.customerService
+      .saveCustomer(this.customer)
+      .subscribe(customer => { this.customer = customer; });
+
     this.customerForm.reset({
       id: '',
       name: '',
