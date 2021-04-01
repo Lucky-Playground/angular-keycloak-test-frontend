@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { User } from '../../model/user';
 import { UserService } from '../../service/user.service';
 import {FormBuilder, FormGroup, NgForm} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
@@ -15,7 +16,8 @@ export class SignInComponent implements OnInit {
   user!: User;
 
   constructor(private userService: UserService,
-              private fb: FormBuilder) {
+              private fb: FormBuilder,
+              private router: Router) {
     // this.createForm();
   }
 
@@ -34,10 +36,11 @@ export class SignInComponent implements OnInit {
     this.user = this.userForm.value;
     console.log(this.user);
 
-    this.userService
+    /*this.userService
       .postUser(this.user)
-      .subscribe(user => { this.user = user; });
+      .subscribe(user => { this.user = user; this.router.navigateByUrl('/dashboard'); });*/   // todo: uncomment when connecting to backend
 
+    this.router.navigateByUrl('/dashboard');
     this.userForm.reset({
       username: '',
       password: ''
