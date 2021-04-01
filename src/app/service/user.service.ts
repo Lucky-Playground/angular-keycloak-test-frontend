@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {User} from '../model/user';
-import {catchError} from 'rxjs/operators';
-
 
 @Injectable({
   providedIn: 'root'
@@ -20,4 +18,5 @@ export class UserService {
     };
     return this.http.post<User>('http://localhost:8080/api/v1/customers', user, httpOptions);
   }
+  // todo: need to call keycloak APIs to get access token and refresh token
 }

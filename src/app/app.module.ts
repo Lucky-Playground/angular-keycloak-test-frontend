@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { SignInComponent } from './view/sign-in/sign-in.component';
 import { SignUpComponent } from './view/sign-up/sign-up.component';
 import { DashboardComponent } from './view/dashboard/dashboard.component';
+import { ManageCustomerComponent } from './view/manage-customer/manage-customer.component';
 
 import { UserService } from './service/user.service';
 
@@ -19,7 +20,8 @@ import { initializeKeycloak } from './utility/app.init';
     AppComponent,
     SignInComponent,
     SignUpComponent,
-    DashboardComponent
+    DashboardComponent,
+    ManageCustomerComponent
   ],
   imports: [
     BrowserModule,

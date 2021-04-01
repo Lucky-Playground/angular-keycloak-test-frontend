@@ -25,4 +25,10 @@ export class DashboardComponent implements OnInit {
   logout(): void{
     this.keycloakService.logout('http://localhost:4200/sign-in');
   }
+
+  toManageCustomers(){
+    console.log('check1');
+    this.router.navigateByUrl('/manage-customers');
+    console.log('check2');
+  }
 }

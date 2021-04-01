@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Test App</h1>
+  <img src="assets/customer.png" alt="">
+  <h3>Manage Customers</h3>
+  <form [formGroup]="customerForm" #cform="ngForm" (ngSubmit)="onSave()">
+    <div class="form-group">
+      <label for="txt-customerId">Customer ID</label>
+      <input formControlName="id" id="txt-customerId" type="text" placeholder="Enter ID">
+    </div>
+    <div class="form-group">
+      <label for="txt-customerName">Name</label>
+      <input formControlName="name" id="txt-customerName" type="text" placeholder="Enter Name">
+    </div>
+    <div class="form-group">
+      <label for="txt-address">Address</label>
+      <input formControlName="address" id="txt-address" type="text" placeholder="Enter password">
+    </div>
+    <div class="form-group">
+      <button class="save">Save</button>
+    </div>
+  </form>
+</div>
