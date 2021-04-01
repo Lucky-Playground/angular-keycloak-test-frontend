@@ -12,7 +12,8 @@ import { DashboardComponent } from './view/dashboard/dashboard.component';
 
 import { UserService } from './service/user.service';
 
-import { initializeKeycloak } from './utility/app.init'
+import { initializeKeycloak } from './utility/app.init';
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -4,9 +4,9 @@ export function initializeKeycloak(keycloak: KeycloakService): () => Promise<boo
   return () =>
     keycloak.init({
       config: {
-        url: 'http://localhost:8080/auth',
-        realm: 'your-realm',
-        clientId: 'your-client-id',
+        url: 'http://localhost:8180/auth',
+        realm: 'demo1',
+        clientId: 'angular-keycloak',
       },                                      // use for SSO
       initOptions: {
         /*onLoad: 'check-sso',
@@ -15,5 +15,6 @@ export function initializeKeycloak(keycloak: KeycloakService): () => Promise<boo
         checkLoginIframe: true,
         checkLoginIframeInterval: 25
       },
+      loadUserProfileAtStartUp: true
     });
 }
