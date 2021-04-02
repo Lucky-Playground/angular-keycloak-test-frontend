@@ -13,14 +13,14 @@ export class CustomerService {
               private keycloakService: KeycloakService) { }
 
   saveCustomer(customer: Customer): Observable<Customer>{
-    const  httpOptions = {
+    /*const  httpOptions = {
       headers: new HttpHeaders()
     };
     let headers: HttpHeaders = new HttpHeaders();
     headers = headers.append('Content-Type', 'application/json');
     headers = headers.append('Authorization', 'Bearer ' + this.keycloakService.getKeycloakInstance().token);
-    httpOptions.headers = headers;
-    return this.http.post<Customer>('http://localhost:8080/api/v1/customers', customer , httpOptions);
+    httpOptions.headers = headers;*/
+    return this.http.post<Customer>('http://localhost:8080/api/v1/customers', customer);
   }
 
   // headers = headers.append('Content-Type', 'application/json');

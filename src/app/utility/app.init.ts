@@ -13,7 +13,7 @@ export function initializeKeycloak(keycloak: KeycloakService): () => Promise<boo
         silentCheckSsoRedirectUri:
           window.location.origin + '/assets/silent-check-sso.html',*/
         checkLoginIframe: true,
-        checkLoginIframeInterval: 25
+        // checkLoginIframeInterval: 25
       },
       loadUserProfileAtStartUp: true
     });

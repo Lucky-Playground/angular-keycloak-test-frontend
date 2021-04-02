@@ -27,8 +27,6 @@ export class DashboardComponent implements OnInit {
   }
 
   toManageCustomers(){
-    console.log('check1');
     this.router.navigateByUrl('/manage-customers');
-    console.log('check2');
   }
 }
